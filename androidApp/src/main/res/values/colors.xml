@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#7370FB</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background_bnv_fab">#7370FB</color>
+
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="bottom_bar">@color/white</color>
+
+    <color name="background_standard">#E3EBFF</color>
+    <color name="background_tint_button">#D7E1FF</color>
+    <color name="text_color_button">#7089FD</color>
+
+    <color name="norm_black">#353535</color>
+    <color name="purple_600">#8DAEF6</color>
+    <color name="grey_indicator">#F0F0F0F0</color>
+
+    <!--  DARK  -->
+    <color name="d_day_fio">#4F5A85</color>
+    <color name="d_main_accent">#B6C5FF</color>
+    <color name="d_btnv">#3D4870</color>
+    <color name="d_background">#202F52</color>
+    <color name="color_reply">#c4c4c4</color>
+
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#FFBB86FC</color>
+</resources>

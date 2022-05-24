@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="14dp"
+    android:layout_marginStart="14dp"
+    android:layout_marginEnd="14dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="11:35"
+        style="@style/standardText.text_in_card_in_calendar"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_end_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/text_start_time"
+        app:layout_constraintTop_toBottomOf="@id/text_start_time"
+        android:gravity="center"
+        tools:text="13:05"
+        android:layout_marginTop="4dp"
+        style="@style/standardText.calendar_text"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_end_time"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="text_start_time, text_end_time"
+        android:layout_width="match_parent"
+        app:barrierDirection="right"
+        android:background="@color/black"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="#FAF9F9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@id/card_event"
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_event"
+        style="@style/backgroundCardEvent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="2dp"
+        app:strokeWidth="0dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/barrier_end_time"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="2dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="17dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_type_lesson"
+                style="@style/Widget.Material3.Chip.Assist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#37c759"
+                android:textColor="@color/white"
+                app:chipCornerRadius="50dp"
+                app:chipStrokeWidth="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Л" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_name_event"
+                style="@style/standardTextBold.start_time_and_and_text_in_card_in_calendar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                tools:text="Event name"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/chip_type_lesson"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/chip_type_lesson"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_desc_event"
+                style="@style/textInCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:visibility="gone"
+                tools:text="Chapter 3: Animal Kingdom"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/text_name_event"
+                app:layout_constraintTop_toBottomOf="@id/text_name_event" />
+
+            <ImageView
+                android:id="@+id/image_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/location"
+                app:layout_constraintEnd_toEndOf="@id/image_leading"
+                app:layout_constraintBottom_toBottomOf="@id/text_location"
+                app:layout_constraintStart_toStartOf="@id/text_desc_event"
+                app:layout_constraintTop_toTopOf="@id/text_location" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_location"
+                style="@style/textInCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                tools:text="Room 2-166"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/image_location"
+                app:layout_constraintTop_toBottomOf="@id/text_desc_event" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/image_leading"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:roundPercent="0.5"
+                android:src="@drawable/test_img_for_events"
+                app:layout_constraintBottom_toBottomOf="@id/text_name_leading"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="@id/text_desc_event"
+                app:layout_constraintTop_toTopOf="@id/text_name_leading" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_name_leading"
+                style="@style/textInCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                tools:text="Julie Watson"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/text_location"
+                app:layout_constraintTop_toBottomOf="@id/text_location" />
+
+<!--            <ImageView-->
+<!--                android:id="@+id/button_ellipsis"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/ellipsis"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

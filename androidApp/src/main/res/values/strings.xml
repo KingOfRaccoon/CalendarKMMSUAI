@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="today">Сегодня</string>
+    <string name="time">Время</string>
+    <string name="event">Мероприятие</string>
+    <string name="no_event">Мероприятий нет</string>
+    <string name="soon">Скоро</string>
+    <string name="share">Поделиться</string>
+    <string name="export">Экспортировать</string>
+</resources>

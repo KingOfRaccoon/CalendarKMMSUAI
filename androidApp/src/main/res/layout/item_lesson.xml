@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginTop="5dp"
+    app:cardElevation="2dp"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="5dp">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_type_lesson"
+            style="@style/Widget.Material3.Chip.Assist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#37c759"
+            android:textColor="@color/white"
+            app:chipCornerRadius="50dp"
+            app:chipStrokeWidth="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Лекция" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_time_lesson"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/chip_type_lesson"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/chip_type_lesson"
+            app:layout_constraintTop_toTopOf="@id/chip_type_lesson"
+            tools:text="9:30-11:10" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_name_lesson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:textSize="22sp"
+            app:autoSizeTextType="uniform"
+            app:fontFamily="@font/centurygothic_bold"
+            app:layout_constraintTop_toBottomOf="@id/chip_type_lesson"
+            tools:text="Математика для менеджеров" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_name_teacher_lesson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/text_name_lesson"
+            tools:text="Бариков Леонид Николаевич" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_place_lesson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/text_name_teacher_lesson"
+            tools:text="Гастелло 15, 12-01" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
